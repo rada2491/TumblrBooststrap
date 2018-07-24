@@ -1,0 +1,26 @@
+{
+  "name": "BS_Sass_Bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run sass\" \"npm run watch\"",
+    "server": "http-server ./dist",
+    "presass": "cp ./src/index.html ./dist/",
+    "sass": "node-sass -w ./src/sass/main.scss --include-path ./src/sass/ --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ -o ./dist/css/",
+    "watch": "copy-and-watch --watch src/**/*.{html}  dist/"
+  },
+  "keywords": [],
+  "author": "Carlos",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "node-sass": "^4.9.2",
+    "rimraf": "^2.6.2",
+    "concurrently": "^3.6.1",
+    "copy-and-watch": "^0.1.2"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
