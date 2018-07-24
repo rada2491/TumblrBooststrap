@@ -4,6 +4,10 @@ body {
   background-color: $body-color;
 }
 
+header {
+  margin-bottom: 39px;
+}
+
 .nav-tum {
   background-color: $tumb-color;
   height: 70px;
@@ -51,20 +55,25 @@ body {
   margin-right: 60px;
 }
 
+/* Main */
+
+.big-cont {
+  margin-left: 139px;
+  margin-right: 60px;
+}
+
 .user-photo img{
   width: 63px;
   height: 63px;
-  margin-top: 39px;
   position: fixed;
-  left: 139px;
 }
 
 .user-Panel {
   height: 100px;
   width: 607px;background-color: #fff;
-  margin-top: 39px;
   position: fixed;
   left: 236px;
+  padding: 0;
 }
 
 .second-user {
@@ -76,14 +85,64 @@ body {
   height: 63px;
   margin-top: 169px;
   position: fixed;
-  left: 139px;
 }
 
-.user-Panel2 {
-  height: 447px;
-  width: 607px;
+.user-Panel2 { /*447 -71*/ 
+  height: 71px;
+  width: 608px;
   background-color: #fff;
   margin-top: 169px;
   position: fixed;
   left: 236px;
+}
+
+.user-Panel3 { 
+  height: 376px;
+  width: 608px;
+  background-color: #fff;
+  margin-top: 240px;
+  position: fixed;
+  left: 236px;
+  padding: 0;
+}
+
+.user-Panel4 { 
+  height: 117px;
+  width: 608px;
+  background-color: #fff;
+  margin-top: 616px;
+  position: fixed;
+  left: 236px;
+  padding: 0;
+}
+
+.action-icons {
+  list-style: none;
+  margin-top: 23px;
+  padding: 0;
+}
+
+.action-icons:first-child {
+  margin-left: 51px;
+}
+
+.action-icons li { 
+    display: inline-block;
+    margin-left: 34px;
+}
+
+.user-options img {
+  margin-bottom: 12px;
+}
+
+.text-color {
+  color: #565656;
+  margin-bottom: 28px;
+}
+
+/* Lateral */
+
+.cont-lateral-sup {
+  height: 402px;
+  background-color: #fff;
 }

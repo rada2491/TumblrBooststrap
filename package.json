@@ -4,23 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run sass\" \"npm run watch\"",
-    "server": "http-server ./dist",
-    "presass": "cp ./src/index.html ./dist/",
-    "sass": "node-sass -w ./src/sass/main.scss --include-path ./src/sass/ --include-path ./node_modules/bootstrap-sass/assets/stylesheets/ -o ./dist/css/",
-    "watch": "copy-and-watch --watch src/**/*.{html}  dist/"
+    "start": "gulp build"
   },
   "keywords": [],
   "author": "Carlos",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^3.6.1",
+    "copy-and-watch": "^0.1.2",
+    "gulp": "^3.9.1",
     "http-server": "^0.11.1",
     "node-sass": "^4.9.2",
-    "rimraf": "^2.6.2",
-    "concurrently": "^3.6.1",
-    "copy-and-watch": "^0.1.2"
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1"
   }
 }
