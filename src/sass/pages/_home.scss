@@ -15,9 +15,9 @@ header {
 
 .nav-tum > img {
   width: 28px;
-  height: 35px;
+  height: 52px;
   margin-left: 60px;
-  margin-top: 20px;
+  padding-top: 20px;
   margin-bottom: 19px;
 }
 
@@ -25,7 +25,7 @@ header {
   width: 315px;
   height: 33px;
   background-color: #2d3a4e;
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 150px;
   background-image: url("../img/searchIcon.png");
@@ -38,7 +38,7 @@ header {
 .icon-nav {
   float: right;
   list-style: none;
-  margin-top: 23px;
+  padding-top: 17px;
 }
 
 .icon-nav li {
@@ -62,69 +62,55 @@ header {
   margin-right: 60px;
 }
 
-.user-photo img{
-  width: 63px;
-  height: 63px;
-  position: fixed;
+.first-user {
+  margin-bottom: 31px;
 }
 
 .user-Panel {
   height: 100px;
-  width: 607px;background-color: #fff;
-  position: fixed;
-  left: 236px;
-  padding: 0;
+  width: 65%;
+  background-color: #fff;
+  padding-right: 0;
+  left: 31px;
+}
+
+.user-photo2 {
+  margin-bottom: 100%;
 }
 
 .second-user {
   height: 169px;
 }
 
-.user-photo2 img{
-  width: 63px;
-  height: 63px;
-  margin-top: 169px;
-  position: fixed;
-}
-
-.user-Panel2 { /*447 -71*/ 
-  height: 71px;
-  width: 608px;
+.user-Panel2 {
+  height: 100px;
+  width: 65%;
   background-color: #fff;
-  margin-top: 169px;
-  position: fixed;
-  left: 236px;
-}
-
-.user-Panel3 { 
-  height: 376px;
-  width: 608px;
-  background-color: #fff;
-  margin-top: 240px;
-  position: fixed;
-  left: 236px;
+  padding-right: 0;
+  left: 31px;
   padding: 0;
 }
 
-.user-Panel4 { 
-  height: 117px;
-  width: 608px;
+.user-Panel3 {
+  height: auto;
+  width: 65%;
   background-color: #fff;
-  margin-top: 616px;
-  position: fixed;
-  left: 236px;
+  padding-right: 0;
+  left: 31px;
   padding: 0;
+
+  img {
+    width: 100%;
+  }
 }
 
 .action-icons {
   list-style: none;
-  margin-top: 23px;
+  margin-top: 21px;
   padding: 0;
 }
 
-.action-icons:first-child {
-  margin-left: 51px;
-}
+/* Icons User */
 
 .action-icons li { 
     display: inline-block;
