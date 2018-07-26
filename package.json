@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp build"
+    "start": "gulp build",
+    "style": "gulp lint"
   },
   "keywords": [],
   "author": "Carlos",

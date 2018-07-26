@@ -67,15 +67,11 @@ header {
 }
 
 .user-Panel {
-  height: 100px;
+  height: auto;
   width: 65%;
   background-color: #fff;
   padding-right: 0;
   left: 31px;
-}
-
-.user-photo2 {
-  margin-bottom: 100%;
 }
 
 .second-user {
@@ -106,42 +102,101 @@ header {
 
 .action-icons {
   list-style: none;
-  margin-top: 21px;
-  padding: 0;
+  margin: 0;
 }
 
+.hashtag {
+  margin: 0;
+  padding: 3% 0 0 3%;
+}
+
+.votes {
+  margin: 0;
+  padding: 1% 0 0% 3%;
+}
+
+.footer-post-icons {
+  list-style: none;
+}
+
+.footer-post-icons li{
+  display: inline-block;
+  padding-right: 10%;
+}
 /* Icons User */
 
 .action-icons li {
   display: inline-block;
-  margin-left: 34px;
+  padding: 3% 4% 0;
+
 }
 
-.user-options img {
-  margin-bottom: 12px;
-}
 
 .text-color {
   color: #565656;
-  margin-bottom: 28px;
 }
 
 /* Lateral */
 
-.cont-lateral-sup {
+.blogs {
   background-color: #fff;
+  height: auto;
 }
 
-.cont-lat-photo {
-  padding-right: 47px;
-  padding-left: 40px;
+
+.blog-user {
+  border-bottom: 1px solid #ebebeb;
+  padding-top: 21px;
+  padding-bottom: 8px;
+  margin: 0;
+}
+
+
+.full-cont {
+  padding: 31px 28px;
 }
 
 .cont-lat-info {
-  padding-left: 3px;
-  padding-right: 0px;
+  b{
+    color: #565656;
+  }
+  p {
+    font-size: 85%;
+    color: #bababa;
+  }
 }
 
-.cont-lat-but {
-  padding-right: 1px;
+.explore {
+  margin: 0;
+  padding: 0px 28px 10px 28px;
+  p {
+    color: #529ecc;
+  }
 }
+
+.cont-lateral {
+  padding: 0 0 30px;
+}
+
+/* Second aside */
+
+.blog-user2 {
+  padding-top: 21px;
+  padding-bottom: 8px;
+  margin: 0;
+  
+}
+
+.second-aside {
+  padding: 0;
+}
+
+.radar-photo {
+  margin: 0;
+  padding: 0 15px;
+  img {
+    width: 100%;
+  }
+}
+
+/* 28 31 he*/
