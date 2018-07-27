@@ -27,7 +27,17 @@ gulp.task('styles', () => {
       path.join(__dirname, 'node_modules/font-awesome')]
       , outputStyle: 'compressed'}))
     .pipe(gulp.dest('dist/css/'))
-     gulp.start('lint');
+})
+
+/* Style login */
+gulp.task('styles-layout', () => {
+  return gulp.src('src/sass/layout.scss')
+    .pipe(sass({includePaths: [
+      path.join(__dirname, 'node_modules/bootstrap-sass/assets/stylesheets'),
+      path.join(__dirname, 'src/sass'),
+      path.join(__dirname, 'node_modules/font-awesome')]
+      , outputStyle: 'compressed'}))
+    .pipe(gulp.dest('dist/css/'))
 })
 
 /* HTML task */
@@ -49,6 +59,7 @@ gulp.task('font-awesome', () => {
 
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', ['styles'])
+  gulp.watch('src/sass/**/*.scss', ['styles-layout'])
   gulp.watch('src/**/*.html', ['html'])
   gulp.watch('assets/*.png', ['assets'], cb => cb)
 })
@@ -64,6 +75,7 @@ gulp.task('server', () => {
 gulp.task('build', [
   'html',
   'styles',
+  'styles-layout',
   'font-awesome',
   'assets',
   'server',
