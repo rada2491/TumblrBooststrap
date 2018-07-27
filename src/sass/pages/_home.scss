@@ -208,3 +208,33 @@ header {
 }
 
 /* 28 31 he*/
+
+
+.header-post-icons{
+  list-style: none;
+}
+
+.header-post-icons li {
+  display: inline-block;
+
+}
+
+a.iconX:before,
+a.iconCompass:before{
+ font-family: FontAwesome;
+ display: inline-block;
+ vertical-align: middle;
+ padding-left:30px;
+}
+
+a.iconX:before {
+ content: "\f00d";
+}
+
+a.iconCompass:before {
+ content: "\f14e";
+}
+
+.header-post {
+  padding: 40px 0px 15px 30px;
+}
