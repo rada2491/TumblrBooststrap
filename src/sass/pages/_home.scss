@@ -13,20 +13,18 @@ header {
   height: 70px;
 }
 
-.nav-tum > img {
-  width: 28px;
-  height: 52px;
-  margin-left: 60px;
-  padding-top: 20px;
-  margin-bottom: 19px;
+.nav-tum > i {
+  margin-left: 9%;
+  position: absolute;
+  top: 20%;
 }
 
 .search-box {
-  width: 315px;
+  width: 55%;
   height: 33px;
   background-color: #2d3a4e;
   position: absolute;
-  top: 20px;
+  top: 28%;
   left: 150px;
   background-image: url("../img/searchIcon.png");
   background-repeat: no-repeat;
@@ -55,14 +53,17 @@ header {
   margin: 0;
 }
 
-.header-post-icons{
+.header-post-list{
   list-style: none;
-  padding-left: 80px;
+  padding: 0;
 }
 
-.header-post-icons li {
+.header-post-list li {
   display: inline-block;
+}
 
+.header-post-icon {
+  padding: 0 40px 0 0;
 }
 
 .house-icon {
@@ -84,8 +85,7 @@ header {
 }
 
 .big-cont {
-  margin-left: 139px;
-  margin-right: 60px;
+  margin-left: 2%;
 }
 
 .first-user {
@@ -109,12 +109,9 @@ header {
     color: #8f8f8f;
   }
 }
+
 .follow-link a{
   font-size: 20px;
-}
-
-.header-post-icons {
-  padding-left: 30px;
 }
 
 .user-Panel3 {
@@ -126,14 +123,22 @@ header {
   }
 }
 
+.icon-user-container {
+  padding: 0;
+}
+
 .action-icons {
   list-style: none;
   margin: 0;
+  padding-left: 0;
 }
 
 .hashtag {
   margin: 0;
   padding: 3% 0 0 3%;
+  p{
+    color: #8f8f8f;
+  }
 }
 
 .votes {
@@ -154,7 +159,6 @@ header {
 .action-icons li {
   display: inline-block;
   padding: 3% 4% 0;
-
 }
 
 
@@ -164,11 +168,18 @@ header {
 
 /* Aside */
 
+.recommended-header {
+  padding: 0 0 0 28px;
+}
+
+.recommended-footer {
+  padding: 0 0 0 26px;
+}
+
 .blogs {
   background-color: #fff;
   height: auto;
 }
-
 
 .blog-user {
   border-bottom: 1px solid #ebebeb;
@@ -176,7 +187,6 @@ header {
   padding-bottom: 8px;
   margin: 0;
 }
-
 
 .full-cont {
   padding: 31px 28px;
@@ -196,7 +206,7 @@ header {
   margin: 0;
   padding: 0px 28px 10px 28px;
   p {
-    color: #529ecc;
+    color: #80b8da;
   }
 }
 
@@ -210,7 +220,6 @@ header {
   padding-top: 21px;
   padding-bottom: 8px;
   margin: 0;
-  
 }
 
 .second-aside {
@@ -218,7 +227,7 @@ header {
 }
 
 .radar-photo {
-  margin: 0;
+  margin: 0 0 15px 0;
   padding: 0 15px;
   img {
     width: 100%;
@@ -229,6 +238,11 @@ header {
   font-size: 130%;
   color:#8f8f8f;
 }
+
+.radar-footer {
+  padding: 0 15px;
+}
+
 .radar-footer-icons {
   list-style: none;
   padding: 0;
@@ -243,11 +257,7 @@ header {
 }
 
 .radar-footer-icons li:last-child {
-  padding: 0 0 0 32px;
-}
-
-.radar-footer{
-  padding: 20px 0 0 0;
+  padding: 0 0 0 12px;
 }
 
 /* CSS ICONS */
@@ -294,7 +304,7 @@ a.iconCompass:before {
 
 .photo-icon {
   height: 25px;
-  width: 31px;
+  width: 31.5px;
   background-position: -134px 0;
 }
 
@@ -306,13 +316,13 @@ a.iconCompass:before {
 
 .link-icon {
   height: 27px;
-  width: 27px;
+  width: 26px;
   background-position: -107px 0;
 }
 
 .chat-icon {
   height: 27px;
-  width: 27px;
+  width: 28px;
   background-position: -28px 0;
 }
 
@@ -328,3 +338,8 @@ a.iconCompass:before {
   background-position: -165px 0;
 }
 
+.first-aside {
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
