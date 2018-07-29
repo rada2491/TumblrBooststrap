@@ -6,10 +6,10 @@ body {
 
 header {
   margin-bottom: 39px;
+  background-color: $tumb-color;
 }
 
 .nav-tum {
-  background-color: $tumb-color;
   height: 70px;
 }
 
@@ -36,7 +36,7 @@ header {
 .icon-nav {
   float: right;
   list-style: none;
-  padding: 17px 44px 0 0;
+  padding: 17px 0 0 0;
 }
 
 .icon-nav li {
