@@ -18,6 +18,16 @@ let stylelint   = require('stylelint');
   //  .pipe()
 //});
 
+/* script task */
+gulp.task('scripts', () => {
+  return gulp.src([
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/popper.js/dist/umd/popper.min.js',
+    'src/js/main.js'])
+  .pipe(gulp.dest('dist/js/'))
+})
+
 /* Styles task */
 gulp.task('styles', () => {
   return gulp.src('src/sass/main.scss')
@@ -40,6 +50,7 @@ gulp.task('styles-layout', () => {
     .pipe(gulp.dest('dist/css/'))
 })
 
+
 /* HTML task */
 gulp.task('html', () => {
   return gulp.src('src/**/*.html')
@@ -48,20 +59,23 @@ gulp.task('html', () => {
 
 /* Assets task */
 gulp.task('assets', () => {
-  return gulp.src('assets/*.png').pipe(gulp.dest('dist/img/'))
+  return gulp.src('assets/*.png')
+    .pipe(gulp.dest('dist/img/'))
 });
 
 /* Font task */
 
 gulp.task('font-awesome', () => {
-  return gulp.src('node_modules/font-awesome/fonts/*').pipe(gulp.dest('dist/fonts/'))
+  return gulp.src('node_modules/font-awesome/fonts/*')
+    .pipe(gulp.dest('dist/fonts/'))
 });
 
 gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', ['styles'])
   gulp.watch('src/sass/**/*.scss', ['styles-layout'])
   gulp.watch('src/**/*.html', ['html'])
-  gulp.watch('assets/*.png', ['assets'], cb => cb)
+  gulp.watch('assets/*.png', ['assets'], cb => cb),
+  gulp.watch('src/js/**/*.js', ['scripts'])
 })
 
 gulp.task('server', () => {
@@ -75,6 +89,7 @@ gulp.task('server', () => {
 gulp.task('build', [
   'html',
   'styles',
+  'scripts',
   'styles-layout',
   'font-awesome',
   'assets',

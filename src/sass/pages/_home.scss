@@ -287,7 +287,9 @@ a.iconCompass:before {
 .link-icon,
 .chat-icon,
 .audio-icon,
-.video-icon {
+.video-icon,
+.upload-camera,
+.upload-world {
   background-image: url('../img/sprite.png');
   background-repeat: no-repeat;
   display: inline-block;
@@ -335,8 +337,52 @@ a.iconCompass:before {
   background-position: -165px 0;
 }
 
+.upload-camera {
+  height: 33px;
+  width: 48px;
+  background-position: -196px 0;
+  margin-bottom: 20px;
+}
+
+.upload-world {
+  height: 46px;
+  width: 46px;
+  background-position: -244px 0;
+  margin-bottom: 10px;
+}
+
 .first-aside {
   padding: 0;
   margin-bottom: 20px;
   margin-top: 0;
+}
+
+.modal-cont {
+  background-color: $modal-main-background;
+}
+
+.modal-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-photos a {
+  color: #ababab;
+  text-decoration: none;
+}
+
+.modal-header-icon i,
+.modal-footer-icon {
+  float: right;
+  padding-right: 30px;
+}
+
+.modal-footer-icon i {
+  padding-right: 20px;
+}
+
+.modal-btn-footer {
+  float: left;
+  border: none;
 }

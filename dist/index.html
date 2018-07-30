@@ -7,6 +7,7 @@
     <title>Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -75,43 +76,43 @@
                                     <div class="col-lg-12">
                                         <ul class="action-icons">
                                             <li class="user-options">
-                                                <a href="#">
+                                                <a href="#" class="rename">
                                                     <i class="text-icon"></i>
                                                     <p class="text-color">Text</p>
                                                 </a>
                                             </li>
                                             <li class="user-options">
-                                                <a href="#">
+                                                <a href="#" class="rename">
                                                     <i class="photo-icon"></i>
                                                     <p class="text-color">Photos</p>
                                                 </a>
                                             </li>
                                             <li class="user-options">
-                                                <a href="#">
+                                                <a href="#" class="rename">
                                                     <i class="quote-icon"></i>
                                                     <p class="text-color">Quote</p>
                                                 </a>
                                             </li>
                                             <li class="user-options">
-                                                <a href="#">
+                                                <a href="#" class="rename">
                                                     <i class="link-icon"></i>
                                                     <p class="text-color">Link</p>
                                                 </a>
                                             </li>
                                             <li class="user-options">
-                                                <a href="#">
+                                                <a href="#" class="rename">
                                                     <i class="chat-icon"></i>
                                                     <p class="text-color">Chat</p>
                                                 </a>
                                             </li>
                                             <li class="user-options">
-                                                <a href="#">
+                                                <a href="#" class="rename">
                                                     <i class="audio-icon"></i>
                                                     <p class="text-color">Audio</p>
                                                 </a>
                                             </li>
                                             <li class="user-options">
-                                                <a href="#">
+                                                <a href="#" class="rename">
                                                     <i class="video-icon"></i>
                                                     <p class="text-color">Video</p>
                                                 </a>
@@ -339,7 +340,101 @@
     </main>
     <footer>
     </footer>
-    <script src="https://unpkg.com/ionicons@4.2.5/dist/ionicons.js"></script>
+
+    <div class="container">
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">mikemike
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#">mikemike</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">mikemike</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">mikemike</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="#">mikemike</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 modal-header-icon">
+                                <i class="fa fa-cog fa-2x" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body modal-cont">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 upload-photos">
+                                <a href="#">
+                                    <div class="row modal-main">
+                                        <i class="upload-camera"></i>
+                                    </div>
+                                    <div class="row modal-main">
+                                        <p>Upload photos</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-5 upload-photos">
+                                <a href="#">
+                                    <div class="row modal-main">
+                                        <i class="upload-world"></i>
+                                    </div>
+                                    <div class="row modal-main">
+                                        <p>Upload photos</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <button type="button" class="btn btn-default modal-btn-footer" data-dismiss="modal">Close</button>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 modal-footer-icon">
+                                <a href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#" class="dropdown-toggle btn btn-primary" data-toggle="dropdown">post
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li>
+                                        <a href="#">post</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">post</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">post</a>
+                                    </li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a href="#">post</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="script" src="js/jquery.min.js"></script>
+    <script type="script" src="js/popper.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
