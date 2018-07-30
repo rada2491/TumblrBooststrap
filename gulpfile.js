@@ -1,10 +1,13 @@
 /* Gulpfile.js */
-let gulp = require('gulp')
-let gutil =  require('gulp-util')
-let sass = require('gulp-sass')
+let gulp = require('gulp');
+let gutil =  require('gulp-util');
+let sass = require('gulp-sass');
 let webserver = require('gulp-webserver');
-let path = require('path')
+let path = require('path');
 let stylelint   = require('stylelint');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
+let eslint = require('gulp-eslint');
 
 /* tasks */
 // gulp.task(
@@ -74,8 +77,9 @@ gulp.task('watch', () => {
   gulp.watch('src/sass/**/*.scss', ['styles'])
   gulp.watch('src/sass/**/*.scss', ['styles-layout'])
   gulp.watch('src/**/*.html', ['html'])
-  gulp.watch('assets/*.png', ['assets'], cb => cb),
+  gulp.watch('assets/*.png', ['assets'], cb => cb)
   gulp.watch('src/js/**/*.js', ['scripts'])
+  gulp.watch('src/js/**/*.js', ['compress'])
 })
 
 gulp.task('server', () => {
@@ -86,10 +90,37 @@ gulp.task('server', () => {
     }))
 })
 
+/* Compress task */
+gulp.task('compress', function (cb) {
+  pump([
+        gulp.src('src/js/*.js'),
+        uglify(),
+        gulp.dest('dist/js')
+    ],
+    cb
+  );
+});
+
+/* Es lint task */
+gulp.task('eslint', () => {
+  return gulp.src('src/js/**/*.js')
+      // eslint() attaches the lint output to the "eslint" property
+      // of the file object so it can be used by other modules.
+      .pipe(eslint())
+      // eslint.format() outputs the lint results to the console.
+      // Alternatively use eslint.formatEach() (see Docs).
+      .pipe(eslint.format())
+      // To have the process exit with an error code (1) on
+      // lint error, return the stream and pipe to failAfterError last.
+      .pipe(eslint.failAfterError());
+});
+
 gulp.task('build', [
   'html',
   'styles',
   'scripts',
+  'eslint',
+  'compress',
   'styles-layout',
   'font-awesome',
   'assets',

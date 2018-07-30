@@ -15,12 +15,15 @@
     "concurrently": "^3.6.1",
     "copy-and-watch": "^0.1.2",
     "gulp": "^3.9.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-webserver": "^0.9.1",
     "http-server": "^0.11.1",
     "node-sass": "^4.9.2",
     "rimraf": "^2.6.2",
     "stylelint": "^9.4.0",
     "stylelint-config-standard": "^18.2.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-eslint": "^5.0.0",
+    "pump": "^3.0.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
