@@ -93,6 +93,5 @@ gulp.task('build', [
   'styles-layout',
   'font-awesome',
   'assets',
-  'server',
   'watch'
 ], cb => cb)
