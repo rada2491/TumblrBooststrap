@@ -23,9 +23,8 @@ gulp.task('scripts', () => {
   return gulp.src([
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/popper.js/dist/umd/popper.min.js',
     'src/js/main.js'])
-  .pipe(gulp.dest('dist/js/'))
+  .pipe(gulp.dest('dist/js'))
 })
 
 /* Styles task */
@@ -95,4 +94,13 @@ gulp.task('build', [
   'assets',
   'server',
   'watch'
+], cb => cb)
+
+gulp.task('deploy',[
+  'html',
+  'styles',
+  'scripts',
+  'styles-layout',
+  'font-awesome',
+  'assets'
 ], cb => cb)
