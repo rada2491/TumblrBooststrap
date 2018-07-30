@@ -22,10 +22,11 @@ let stylelint   = require('stylelint');
 gulp.task('scripts', () => {
   return gulp.src([
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'node_modules/jquery/dist/jquery.min.js',
-    'src/js/main.js'])
+    'src/js/main.js',
+    'node_modules/jquery/dist/jquery.min.js'])
   .pipe(gulp.dest('dist/js'))
 })
+
 
 /* Styles task */
 gulp.task('styles', () => {
