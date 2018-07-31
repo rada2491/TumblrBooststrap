@@ -23,14 +23,14 @@
     "stylelint": "^9.4.0",
     "stylelint-config-standard": "^18.2.0",
     "gulp-eslint": "^5.0.0",
-    "pump": "^3.0.0"
+    "pump": "^3.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "font-awesome": "^4.7.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-util": "^3.0.8",
     "jquery": "^3.3.1"
   }
 }
