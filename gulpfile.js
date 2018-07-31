@@ -125,6 +125,7 @@ gulp.task('deploy',[
   'html',
   'styles',
   'scripts',
+  'compress',
   'styles-layout',
   'font-awesome',
   'assets'
