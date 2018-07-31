@@ -25,19 +25,19 @@
     </header>
 
     <main>
-        <form action="main.html" onsubmit="Module.validaCredenciales()">
+        <form action="main.html" onsubmit="return Module().validaCredenciales()">
             <div class="container-fluid">
                 <div class="container main-container">
                     <div class="row">
                         <div class="col-lg-offset-5 col-lg-3 col-md-offset-5 col-md-3 col-sm-12 user-info">
                             <div class="row email-row">
-                                <input class="form-control email-input" type="email" placeholder="Email" id="email" >
+                                <input class="form-control email-input" type="email" placeholder="Email" id="email">
                             </div>
                             <div class="row email-row">
-                                <input class="form-control email-input" type="password" placeholder="Password" id="password" >
+                                <input class="form-control email-input" type="password" placeholder="Password" id="password">
                             </div>
                             <div class="row button-row">
-                                <button href="main.html" type="submit" class="btn btn-primary next-button" id="nextButton">
+                                <button type="submit" class="btn btn-primary next-button" id="nextButton">
                                     Next
                                 </button>
                             </div>
@@ -73,6 +73,8 @@
             </div>
         </div>
     </footer>
+
+
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/main.js"></script>

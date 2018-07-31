@@ -25,7 +25,6 @@ let eslint = require('gulp-eslint');
 gulp.task('scripts', () => {
   return gulp.src([
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
-    'src/js/main.js',
     'node_modules/jquery/dist/jquery.min.js'])
   .pipe(gulp.dest('dist/js'))
 })
@@ -93,7 +92,7 @@ gulp.task('server', () => {
 /* Compress task */
 gulp.task('compress', function (cb) {
   pump([
-        gulp.src('src/js/*.js'),
+        gulp.src('src/js/**/*.js'),
         uglify(),
         gulp.dest('dist/js')
     ],
@@ -104,14 +103,8 @@ gulp.task('compress', function (cb) {
 /* Es lint task */
 gulp.task('eslint', () => {
   return gulp.src('src/js/**/*.js')
-      // eslint() attaches the lint output to the "eslint" property
-      // of the file object so it can be used by other modules.
       .pipe(eslint())
-      // eslint.format() outputs the lint results to the console.
-      // Alternatively use eslint.formatEach() (see Docs).
       .pipe(eslint.format())
-      // To have the process exit with an error code (1) on
-      // lint error, return the stream and pipe to failAfterError last.
       .pipe(eslint.failAfterError());
 });
 

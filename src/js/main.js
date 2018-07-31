@@ -5,38 +5,21 @@ $(".rename").click(function (e) {
     $("#basicModal").data("fileName", fileName).modal("toggle", $this);
 });
 
-
-
-
 var Module = (function () {
-    console.log('entre')
+    var id = 'prueba@gmail.com';
+    var password = 123;
     var email = document.getElementById("email").value;
     var pass = document.getElementById("password").value;
-    var validaCredenciales= function () {
-        if (pass == 123 || email == 'cbr2491@gmail.com') {
+    var validaCredenciales = function () {
+        if ((pass == password) && (email == id)) {
+            alert('Bienvenido')
             return true;
         } else {
-            alert('Estas mamando');
+            alert('Email: Prueba@gmail.com,Contraseña: 123');
+            return false;
         }
     };
-
     return {
         validaCredenciales: validaCredenciales
     };
 });
-
-/* var Module = (function () {
-
-    var _privateMethod = function () {
-      // private stuff
-    };
-  
-    var publicMethod = function () {
-      _privateMethod();
-    };
-    
-    return {
-      publicMethod: publicMethod
-    };
-  
-  })(); */
